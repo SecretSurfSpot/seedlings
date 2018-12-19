@@ -6,4 +6,9 @@ class Seedlings < Sinatra::Base
     'Hello World!'
   end
 
+  configure do
+      set :views, Proc.new { File.join(root, "app/views") }
+      enable :sessions
+  end
+
 end
