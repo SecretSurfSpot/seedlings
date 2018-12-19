@@ -1,17 +1,16 @@
 require 'pg'
 
 def setup_test_database
-
   p 'setting up database.....'
 
   connection = PG.connect(dbname: 'seedlings_campaigns_test')
 
   # Clear the campaigns, investor & Investments tables
-  connection.exec("TRUNCATE campaigns;")
-  connection.exec("TRUNCATE investor;")
-  connection.exec("TRUNCATE investments;")
+  connection.exec('TRUNCATE campaigns;')
+  connection.exec('TRUNCATE investor;')
+  connection.exec('TRUNCATE investments;')
 
-  # Populate the campaigns table with some data for the '.view_all_campaigns' test
+  # Populate the campaigns table with data for the '.view_all_campaigns' test
   connection.exec("INSERT into campaigns(name, image, country, sector, target_amount)
     VALUES('Campaign_1', 'Image_1', 'United Kingdom', 'Automotive', 1000000),
     	  ('Campaign_2', 'Image_2', 'Ireland', 'Electrical', 100000),
