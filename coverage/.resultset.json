@@ -45,6 +45,14 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/andrewgibbs/Projects/tech_tests/seedrs/seedlings/app/model/database.rb": [
@@ -53,8 +61,8 @@
         1,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         0,
         null,
@@ -63,6 +71,6 @@
         null
       ]
     },
-    "timestamp": 1545215595
+    "timestamp": 1545215733
   }
 }

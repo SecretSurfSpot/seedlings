@@ -7,4 +7,12 @@ describe Database do
       Database.setup_connection()
     end
   end
+
+  describe ".run_query" do
+    it "executes a query using PG" do
+      connection = Database.setup_connection()
+      expect(connection).to receive(:exec).with("SELECT * FROM campaigns;")
+      Database.run_query("SELECT * FROM campaigns;")
+    end
+  end
 end
