@@ -12,4 +12,14 @@ describe Campaign do
       expect(campaigns[19].name).to include('Campaign_20')
     end
   end
+
+  describe '.select_campaign' do
+  it 'should display selected campaign' do
+    campaign = Campaign.select_campaign({:name=>"Campaign_2"})
+    expect(campaign[0].name).to include('Campaign_2')
+    expect(campaign[0].country).to include('Ireland')
+    expect(campaign[0].sector).to include('Electrical')
+    expect(campaign[0].target_amount).to include('200000')
+  end
+end
 end
