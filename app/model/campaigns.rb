@@ -19,4 +19,13 @@ class Campaign
       Campaign.new(name: campaign['name'], image: campaign['image'], country: campaign['country'], sector: campaign['sector'], target_amount: campaign['target_amount'])
     end
   end
+
+  def self.select_campaign(campaign_name)
+    Database.setup_connection
+    campaign = Database.run_query("SELECT * FROM campaigns WHERE name = '#{campaign_name [:name]}';")
+
+    campaign.map do |campaign|
+      Campaign.new(name: campaign['name'], image: campaign['image'], country: campaign['country'], sector: campaign['sector'], target_amount: campaign['target_amount'])
+    end
+  end
 end

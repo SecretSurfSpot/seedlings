@@ -8,6 +8,11 @@ class Seedlings < Sinatra::Base
     erb :campaign_list
   end
 
+  get '/:name' do
+    @campaign = Campaign.select_campaign(name: params[:name])
+    erb :campaign
+  end
+
   configure do
     set :views, Proc.new { File.join(root, 'app/views') }
     enable :sessions

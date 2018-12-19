@@ -1,0 +1,19 @@
+<title><%= @campaign[0].name %></title>
+
+<div class="container" id="campaign">
+  <ul class="list-group" >
+    <li style="margin-bottom:25px">
+      <div class="media">
+        <div class="media-left">
+          <img src="/images/<%= @campaign[0].image %>.jpeg" class="media-object">
+        </div>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= @campaign[0].name %></h4>
+        <h6 class="media-heading"><%= @campaign[0].country %></h6>
+        <h6 class="media-heading"><%= @campaign[0].sector %></h6>
+        <p id="Target Amount">Target Amount: £<%= @campaign[0].target_amount %></p>
+      </div>
+    </li>
+  </ul>
+</div>
