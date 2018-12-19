@@ -8,8 +8,8 @@ class Seedlings < Sinatra::Base
   end
 
   configure do
-      set :views, Proc.new { File.join(root, "app/views") }
-      enable :sessions
+    set :views, Proc.new { File.join(root, "app/views") }
+    enable :sessions
   end
 
 end
