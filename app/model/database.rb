@@ -10,4 +10,7 @@ class Database
     end
   end
 
+  def self.run_query(sql)
+    @connection.exec(sql)
+  end
 end
