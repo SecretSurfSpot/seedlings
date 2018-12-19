@@ -20,4 +20,13 @@ feature 'Feature Tests' do
     expect(page).to have_content('How much do you want to invest?')
     expect(page).to have_selector(:link_or_button, 'Invest')
   end
+
+  scenario 'User invests £10000 into Campaign_3' do
+    visit '/'
+    find(:xpath, "//a[@href='/Campaign_3']").click
+    fill_in 'investment amount', :with => '10000'
+    find_button('Invest').click
+    expect(page).to have_content('Congratulation! You have just invested £10000 in Campaign_3')
+    expect(page).to have_selector(:link_or_button, '/')
+  end
 end
