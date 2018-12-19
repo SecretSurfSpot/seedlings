@@ -1,5 +1,4 @@
 feature 'Feature Tests' do
-
   scenario 'User navigates to the Campaign List page' do
     visit '/'
     expect(page).to have_title('Campaign List')
