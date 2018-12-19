@@ -17,5 +17,7 @@ feature 'Feature Tests' do
     expect(page).to have_content('Ireland')
     expect(page).to have_content('Electrical')
     expect(page).to have_content('£200000')
+    expect(page).to have_content('How much do you want to invest?')
+    expect(page).to have_selector(:link_or_button, 'Invest')
   end
 end
