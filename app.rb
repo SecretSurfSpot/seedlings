@@ -4,6 +4,7 @@ class Seedlings < Sinatra::Base
 
   get '/' do
     'Hello World!'
+    erb :campaign_list
   end
 
   configure do
