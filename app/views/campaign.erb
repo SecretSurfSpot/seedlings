@@ -1,4 +1,4 @@
-<title><%= @campaign[0].name %></title>
+<title>Investment: <%= @campaign[0].name %></title>
 
 <div class="container" id="campaign">
   <ul class="list-group" >
@@ -16,9 +16,10 @@
       </div>
     </li>
   </ul>
-  <form action="/invest">
-    How much do you want to invest?  £
-    <input type="text" name="investment amount" value="">
-    <input type="submit" value="Invest">
+  <form class="" form action="/invest" method="post">
+    <h5>How much do you want to invest?  £
+    <input type="hidden" id="campaign_name" name="campaign_name" value="<%= @campaign[0].name %>">
+    <input type="text" name="amount" value="">
+    <input type="submit" value="Invest"></h5>
   </form>
 </div>

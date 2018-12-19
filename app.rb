@@ -13,6 +13,11 @@ class Seedlings < Sinatra::Base
     erb :campaign
   end
 
+  post '/invest' do
+    Campaign.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
+    redirect '/'
+  end
+
   configure do
     set :views, (proc { File.join(root, 'app/views') })
     enable :sessions

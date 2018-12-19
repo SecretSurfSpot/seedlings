@@ -26,6 +26,8 @@ describe Campaign do
   # describe '.invest_in_campaign' do
   #   it 'should invest the given amount into the chosen campaign' do
   #     investment = Campaign.invest_in_campaign(name: 'Campaign_3', amount: 10000)
+  #     expect(investment[0].campaign_name).to include('Campaign_3')
+  #     expect(investment[0].amount).to include('10000')
   #   end
   # end
 end

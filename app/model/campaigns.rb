@@ -28,4 +28,9 @@ class Campaign
       Campaign.new(name: campaign['name'], image: campaign['image'], country: campaign['country'], sector: campaign['sector'], target_amount: campaign['target_amount'])
     end
   end
+
+  def self.invest_in_campaign(name)
+    Database.setup_connection
+    result = Database.run_query("INSERT INTO investments(campaign_name, investor_name, amount) VALUES('#{name [:name]}', 'guest', #{name [:amount]}) RETURNING campaign_name, amount;")
+  end
 end
