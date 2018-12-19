@@ -1,1 +1,23 @@
 <title> Campaign List </title>
+
+<div class="container" id="campaign">
+  <ul class="list-group" >
+    <% @campaigns.each do |campaign| %>
+      <a href="/<%= campaign.name %>" style="text-decoration: none">
+        <li style="margin-bottom:25px">
+          <div class="media">
+            <div class="media-left">
+              <img src="/images/<%= campaign.image %>.jpeg" class="media-object">
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><%= campaign.name %></h4>
+            <h6 class="media-heading"><%= campaign.country %></h6>
+            <h6 class="media-heading"><%= campaign.sector %></h6>
+            <p id="Target Amount">Target Amount: £<%= campaign.target_amount %></p>
+          </div>
+        </li>
+      </a>
+    <% end %>
+  </ul>
+</div>
