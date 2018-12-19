@@ -5,8 +5,26 @@
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/andrewgibbs/Projects/tech_tests/seedrs/seedlings/spec/unit/campaigns_spec.rb": [
         1,
-        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -18,6 +36,6 @@
         null
       ]
     },
-    "timestamp": 1545212526
+    "timestamp": 1545213961
   }
 }
