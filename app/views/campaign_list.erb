@@ -9,11 +9,17 @@
               <img src="/images/<%= campaign.image %>.jpeg" class="media-object">
             </div>
           </div>
+          <br>
           <div class="media-body">
-            <h4 class="media-heading"><%= campaign.name %></h4>
-            <h6 class="media-heading"><%= campaign.country %></h6>
-            <h6 class="media-heading"><%= campaign.sector %></h6>
-            <p id="Target Amount">Target Amount: £<%= campaign.target_amount %></p>
+            <h6 class="media-heading"><%= campaign.name %></h6>
+            <br>
+            <div class="left_right_Container">
+              <h6 class="media-heading"><%= campaign.country %></h6>
+              <h6 class="media-heading"><%= campaign.sector %></h6>
+            </div>
+            <br>
+            <br>
+            <h5 class="media-heading">Target Amount: £<%= campaign.target_amount %></h5>
           </div>
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"

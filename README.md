@@ -74,7 +74,7 @@ I'd like to see a message informing me my investment has been accepted
 
 ## Approach
 
-Created with Ruby & Sinatra, with RSpec & Capybara (testing frameworks), using BDD, TDD and OOP principles.
+Created using PostgreSQL, Ruby & Sinatra, with RSpec & Capybara (testing frameworks), using BDD, TDD and OOP principles.
 
 SimpleCov & Rubocop were also used to measure test coverage and ensure code quality.
 
@@ -100,11 +100,19 @@ The above commands result in the output shown in the screenshot below:
 ### Use
 To use the application...........:
 
+- Open Terminal (or a similar command line interface)
+- Run `rackup` from the project root
+- Open Google Chrome and navigate to: `localhost:9292`
 
+The above commands will take you to the 'Campaign List' page, as shown in the screenshot below:
 
-The above commands result in the output shown in the screenshot below:
+![REPL screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/campaign_list_screenshot.png)
 
-![REPL screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/interaction_screenshot.png)
+- On the Campaign List page, to invest in a campaign, click one of the campaign cards
+
+This will take you to the 'Investment' page, as shown in the screenshot below:
+
+![REPL screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/investment_screenshot.png)
 
 ## Domain Model
 

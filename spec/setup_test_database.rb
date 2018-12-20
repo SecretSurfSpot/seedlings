@@ -10,7 +10,7 @@ def setup_test_database
 
   # Populate the investments table with some data
   connection.exec("INSERT into investments(campaign_name, investor_name, amount)
-    VALUES('Campaign_1', 'guest', 10000),
+    VALUES('Campaign_1', 'guest', 100000),
       ('Campaign_2', 'guest', 30000),
       ('Campaign_3', 'guest', 25000),
   		('Campaign_4', 'guest', 1000),
