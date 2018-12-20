@@ -74,7 +74,7 @@ I'd like to see a message informing me my investment has been accepted
 
 ## Approach
 
-Created with Ruby.......... and RSpec........ (testing framework), using BDD, TDD and OOP principles.
+Created with Ruby & Sinatra, with RSpec & Capybara (testing frameworks), using BDD, TDD and OOP principles.
 
 SimpleCov & Rubocop were also used to measure test coverage and ensure code quality.
 
@@ -89,7 +89,9 @@ The project can be found here: https://github.com/SecretSurfSpot/seedlings
 
 ### Testing
 To test the application:
-...........
+
+- Open Terminal (or a similar command line interface)
+- Run `rspec` from the project root
 
 The above commands result in the output shown in the screenshot below:
 
