@@ -23,13 +23,15 @@
         1,
         1,
         1,
+        1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -83,18 +85,18 @@
         null
       ],
       "/Users/andrewgibbs/Projects/tech_tests/seedrs/seedlings/spec/unit/invest_spec.rb": [
+        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1545317630
+    "timestamp": 1545329577
   }
 }
