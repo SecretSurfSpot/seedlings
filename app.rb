@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './app/model/campaigns'
+require './app/model/invest'
 require './app/model/database'
 
 class Seedlings < Sinatra::Base
