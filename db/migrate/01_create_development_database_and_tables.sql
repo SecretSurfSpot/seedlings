@@ -1,5 +1,5 @@
 --#################### DEVELOPMENT DATABASE AND TABLES ####################
--- To create and populate the database and tables, via the terminal, enter the following commamds:
+-- To create and populate the database and tables, via the terminal, enter the following commands:
 
 -- 1) To access PostgreSQL via the terminal:
 psql

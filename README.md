@@ -87,6 +87,10 @@ The project can be found here: https://github.com/SecretSurfSpot/seedlings
 - Clone the repo to your local machine
 - Run `bundle install`
 
+### Database Setup
+
+- [Database Setup](./database_setup.md)
+
 ### Testing
 To test the application:
 

@@ -16,9 +16,11 @@ class Seedlings < Sinatra::Base
   end
 
   post '/invest' do
-    p "1 - in invest ROUTE, @single_campaign is #{@single_campaign}"
-    Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
-    redirect '/confirmation'
+    @investment = Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
+    p "##############   #{@investment}"
+    p "##############   #{@investment[0]}"
+    erb :confirmation
+    # redirect '/confirmation'
   end
 
   get '/confirmation' do

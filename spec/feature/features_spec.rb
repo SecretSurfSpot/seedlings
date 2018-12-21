@@ -13,6 +13,7 @@ feature 'Feature Tests' do
   scenario 'User selects Campaign_2 from Campaign List page' do
     visit '/'
     find(:xpath, "//a[@href='/Campaign_2']").click
+    expect(page).to have_title('Investment')
     expect(page).to have_content('Ireland')
     expect(page).to have_content('Electrical')
     expect(page).to have_content('£200000')
@@ -26,7 +27,8 @@ feature 'Feature Tests' do
     find(:xpath, "//a[@href='/Campaign_3']").click
     fill_in 'amount', with: 65000
     find_button('Invest').click
-    # expect(page).to have_content('Congratulation! You have just invested 10000 in Campaign_3')
+    expect(page).to have_title('Confirmation')
+    expect(page).to have_content('You have just successfully invested')
     # expect(page).to have_selector(:link_or_button, '/')
   end
 end
