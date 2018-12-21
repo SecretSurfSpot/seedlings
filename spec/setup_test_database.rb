@@ -3,12 +3,13 @@ require 'pg'
 def setup_test_database
   p 'setting up test database tables.....'
 
+  # Connect to the seedlings_campaigns_test database 
   connection = PG.connect(dbname: 'seedlings_campaigns_test')
 
   # Clear the investments table
   connection.exec('TRUNCATE investments CASCADE;')
 
-  # Populate the investments table with some data
+  # Populate the investments table with data for testing
   connection.exec("INSERT into investments(campaign_name, investor_name, amount)
     VALUES('Campaign_1', 'guest', 100000),
       ('Campaign_2', 'guest', 30000),

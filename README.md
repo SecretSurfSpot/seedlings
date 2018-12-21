@@ -115,19 +115,11 @@ This will take you to the 'Investment' page, as shown in the screenshot below:
 
 ![REPL screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/investment_screenshot.png)
 
-## Domain Model
+## Appendix - Documentation
 
-The model below illustrates the high-level structure of the application.
+- [CRC Cards](./crc_cards.md)
+- [Domain model](./domain_model.md)  
 
-xxx classes:
-
-1. **XXX:** ...........
-
-
-```
-
-
-```
 
 ## Possible Improvements
 ...........
