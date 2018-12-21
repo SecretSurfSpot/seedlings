@@ -51,6 +51,7 @@ Table name: investments
 
 
 Table name: investor
+
 | Column name   | Data type        |
 | ------------- | -------------    |
 | name            | VARCHAR(50) PRIMARY KEY |
