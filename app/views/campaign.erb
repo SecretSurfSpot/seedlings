@@ -1,35 +1,37 @@
-<title>Investment <%= @single_campaign[0].name %></title>
+<title>Investment</title>
 
   <ul class="list-group" >
-    <li style="margin-bottom:25px">
-      <div class="media">
-        <div class="media-left">
-          <img src="/images/<%= @single_campaign[0].image %>.jpeg" class="media-object">
-        </div>
-      </div>
-      <br>
-      <div class="media-body">
-        <h6 class="media-heading"><%= @single_campaign[0].name %></h6>
-        <br>
-        <div class="left_right_Container">
-          <h6 class="media-heading"><%= @single_campaign[0].country %></h6>
-          <h6 class="media-heading"><%= @single_campaign[0].sector %></h6>
+    <% @single_campaign.each do |campaign| %>
+      <li style="margin-bottom:25px">
+        <div class="media">
+          <div class="media-left">
+            <img src="/images/<%= campaign.image %>.jpeg" class="media-object">
+          </div>
         </div>
         <br>
-        <br>
-        <h5 class="media-heading">Target Amount: £<%= @single_campaign[0].target_amount %></h5>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-        aria-valuemin="0" aria-valuemax="100" style="width:<%= @single_campaign[0].percentage %>%">
-          <span class=""><%= @single_campaign[0].percentage %>% Funded</span>
+        <div class="media-body">
+          <h6 class="media-heading"><%= campaign.name %></h6>
+          <br>
+          <div class="left_right_Container">
+            <h6 class="media-heading"><%= campaign.country %></h6>
+            <h6 class="media-heading"><%= campaign.sector %></h6>
+          </div>
+          <br>
+          <br>
+          <h5 class="media-heading">Target Amount: £<%= campaign.target_amount %></h5>
         </div>
-      </div>
-    </li>
-  </ul>
-  <form class="" form action="/invest" method="post">
-    <h6>How much do you want to invest?<br><br>
-    <input type="hidden" id="campaign_name" name="campaign_name" value="<%= @single_campaign[0].name %>">
-    <input type="text" name="amount" value="">
-    <input type="submit" value="Invest"></h6>
-  </form>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+          aria-valuemin="0" aria-valuemax="100" style="width:<%= campaign.percentage %>%">
+            <span class=""><%= campaign.percentage %>% Funded</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <form class="" form action="/invest" method="post">
+      <h6>How much do you want to invest?<br><br>
+      <input type="hidden" id="campaign_name" name="campaign_name" value="<%= campaign.name %>">
+      <input type="text" name="amount" value="">
+      <input type="submit" value="Invest"></h6>
+    </form>
+  <% end %>

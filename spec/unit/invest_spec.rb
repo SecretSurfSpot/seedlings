@@ -18,9 +18,5 @@ describe Invest do
     it 'should raise an error if the given amount isn\'t a positive number' do
       expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: -10000) }.to raise_error 'Error: investment amount must be positive'
     end
-
-    # it 'should raise an error if the given amount isn\'t an integer' do
-    #   expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: 'string') }.to raise_error 'Error: investment amount must be a number'
-    # end
   end
 end

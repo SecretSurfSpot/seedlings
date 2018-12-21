@@ -4,6 +4,7 @@ require './app/model/invest'
 require './app/model/database'
 
 class Seedlings < Sinatra::Base
+
   get '/' do
     @all_campaigns = Campaign.view_all_campaigns
     erb :campaign_list
@@ -15,8 +16,9 @@ class Seedlings < Sinatra::Base
   end
 
   post '/invest' do
+    p "1 - in invest ROUTE, @single_campaign is #{@single_campaign}"
     Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
-    redirect '/'
+    redirect '/confirmation'
   end
 
   get '/confirmation' do

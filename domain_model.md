@@ -29,11 +29,16 @@ Server (Sinatra Framework) is listening on a specific port
 ║   Views    ║                  |------------->║  Campaigns ║<-----------------------
 ║            ║                  |              ║  (class)   ║                       |
 ╚════════════╝                  |              ╚════════════╝                       |
-Embedded Ruby                   |                     |                             |
+Embedded Ruby                   |                                                   |
                                 |              ╔════════════╗       (SQL)     ╔════════════╗
                                 |              ║            ║                 ║ PostgreSQL ║
                                 |------------->║   Invest   ║<--------------->║  Database  ║
-                                               ║   (class)  ║                 ║            ║
-                                               ╚════════════╝                 ╚════════════╝
-
+                                |              ║   (class)  ║                 ║            ║
+                                |              ╚════════════╝                 ╚════════════╝
+                                |
+                                |              ╔════════════╗      
+                                |              ║            ║
+                                |------------->║Confirmation║
+                                               ║   (class)  ║
+                                               ╚════════════╝
 ```

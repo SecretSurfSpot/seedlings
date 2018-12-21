@@ -31,7 +31,7 @@ Table name: campaigns
 
 | Column name   | Data type        |
 | ------------- | -------------    |
-| id            | SERIALl  |
+| id            | SERIAL  |
 | name          | VARCHAR(50) PRIMARY KEY         |
 | image          | VARCHAR(50)          |
 | country     | VARCHAR(30)  |
