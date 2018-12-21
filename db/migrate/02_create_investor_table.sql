@@ -1,2 +1,0 @@
-CREATE TABLE investor(
-	name VARCHAR(50) PRIMARY KEY);

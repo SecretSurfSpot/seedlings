@@ -108,6 +108,7 @@ The above commands will take you to the 'Campaign List' page, as shown in the sc
 
 ![REPL screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/campaign_list_screenshot.png)
 
+
 - On the Campaign List page, to invest in a campaign, click one of the campaign cards
 
 This will take you to the 'Investment' page, as shown in the screenshot below:
