@@ -4,9 +4,9 @@ A mini Seedrs clone.
 
 ## Requirements
 
-Click the [Challenge Specification](./seedlings_challenge_specs.md) to see the full requirements/specification.
+Click the [Challenge Specification](./seedlings_challenge_specs.md) to see the full requirements/specifications.
 
-From the given spec, a high level set of requirements, and 3 users stories, have been derived, as below:
+From the above specifications, a high level set of requirements and 3 users stories have been derived, as below:
 
 Implement a mini Seedrs website with 3 pages:
 1) List of Campaigns
@@ -98,3 +98,11 @@ Clicking on the 'Back to all campaigns' link, takes you back to the 'Campaign Li
 
 
 ## Possible Improvements
+Given more time, I would like to include to following:
+- Generally improve the appearance/formatting of the 'campaigns':
+  - adding a 'card' for each campaign
+  - implementing a 'grid' like appearance
+  - adding pagination to the Campaign List page
+- Modularise the common content of the campaign_list.erb and campaign.erb files
+- Although all tests provide 100% code coverage, testing could be improved to include edge cases/incorrect output verification
+- Integrate an ORM (Object-Relational Mapping), such as ActiveRecord or DataMapper
