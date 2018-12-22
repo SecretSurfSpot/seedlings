@@ -4,7 +4,6 @@ require './app/model/invest'
 require './app/model/database'
 
 class Seedlings < Sinatra::Base
-
   get '/' do
     @all_campaigns = Campaign.view_all_campaigns
     erb :campaign_list

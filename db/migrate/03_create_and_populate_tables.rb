@@ -2,7 +2,6 @@ require 'pg'
 
 class DatabaseCreation
   def self.create_and_populate_tables(database_name)
-
     # Connect to the seedlings_campaigns_test database
     connection = PG.connect(dbname: database_name)
 

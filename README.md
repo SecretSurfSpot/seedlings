@@ -1,6 +1,6 @@
 # Seedlings
 
-A mini Seedrs clone.
+Seedlings is a mini Seedrs clone application.
 
 ## Requirements
 
@@ -40,16 +40,18 @@ Created using PostgreSQL, Ruby & Sinatra, with RSpec & Capybara (testing framewo
 
 SimpleCov & Rubocop were also used to measure test coverage and ensure code quality.
 
-## The Application  (seedlings)
+## The Application
 
 The project can be found here: https://github.com/SecretSurfSpot/seedlings
 
 ### Installation
-- Perquisites: Ruby 2.5.1 installed on your machine
+- Perquisites: Ruby 2.5.1 and PostgreSQL 10.5 installed on your machine
 - Clone the repo to your local machine
 - Run `bundle install`
 
 ### Database Setup
+
+Follow the instructions in the linked document below:
 
 - [Database Setup](./database_setup.md)
 
@@ -106,3 +108,4 @@ Given more time, I would like to include to following:
 - Modularise the common content of the campaign_list.erb and campaign.erb files
 - Although all tests provide 100% code coverage, testing could be improved to include edge cases/incorrect output verification
 - Integrate an ORM (Object-Relational Mapping), such as ActiveRecord or DataMapper
+- The application has been developed to run on Google Chrome, I'd to modify it so it works correctly on all popular browsers
