@@ -9,11 +9,11 @@ class Invest
   end
 
   def self.invest_in_campaign(name:, amount:)
-    # verify_numeric(amount)
+    verify_numeric(amount)
     verify_positive(amount)
 
     Database.setup_connection
-    result = Database.run_query("INSERT INTO investments(campaign_name, investor_name, amount) VALUES('#{name}', 'guest', #{amount}) RETURNING campaign_name, amount;")
+    Database.run_query("INSERT INTO investments(campaign_name, investor_name, amount) VALUES('#{name}', 'guest', #{amount}) RETURNING campaign_name, amount;")
   end
 
   def self.verify_numeric(amount)
@@ -23,4 +23,7 @@ class Invest
   def self.verify_positive(amount)
     raise ArgumentError, 'Error: investment amount must be positive' unless amount.to_i.positive?
   end
+
+  private_class_method :verify_numeric
+  private_class_method :verify_positive
 end

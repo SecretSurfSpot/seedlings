@@ -32,14 +32,14 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   # Want a nice code coverage website? Uncomment this next line!
   # SimpleCov::Formatter::HTMLFormatter
-])
+  ])
 SimpleCov.start
 
 RSpec.configure do |config|
   # before each test run the setup_test_database method
-config.before(:each) do
-  setup_test_database
-end
+  config.before(:each) do
+    setup_test_database
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

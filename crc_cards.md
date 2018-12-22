@@ -17,14 +17,6 @@ Class: Invest
 | invest_in_campaign          |Campaign |
 
 
-Class: Confirmation
-
-| R  | C        |
-| ------------- | -------------    |
-| confirm_investment_made          |Campaign |
-
-
-
 # Database Model
 
 Table name: campaigns

@@ -1,15 +1,14 @@
 <title>Confirmation</title>
- <%= p "******** @investment is #{@investment}" %>
- <%= p "******** @investment[0] is #{@investment[0]}" %>
 
   <ul class="list-group" >
-    <% @investment.each do |el| %>
+    <% @investment.each do |element| %>
         <div class="media-body">
-          <h6 class="media-heading">You have just successfully invested<%= el %></h6>
-          <h6 class="media-heading"><%= p "#{@investment.map {|x| x.values[1]}}" %></h6>
+          <h6 class="media-heading"></h6>
+          <h6 class="media-heading"><%= "Congratulations! you have successfully invested £#{element['amount']} in #{element['campaign_name']}" %></h6>
           <br>
-
+          <a href="/" style="text-decoration: none">
+            <h6 class="media-heading">Back to all campaigns</h6>
+          </a>
         </div>
-
     <% end %>
   </ul>

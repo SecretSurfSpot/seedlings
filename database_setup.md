@@ -1,72 +1,24 @@
-# DEVELOPMENT DATABASE AND TABLES
+# Setup the Development & Test Databases
 
-To create and populate the development database and tables, via the terminal, enter the following commands:
+To setup the development & test databases, via the terminal, enter the following commands:
 
-1) To access PostgreSQL via the terminal:
-- `psql`
+1) To access the PostgreSQL terminal interface:
+`psql`
 
-2) For the 'development' database:
-- `CREATE DATABASE "seedlings_campaigns";`
+2) To create the 'development' database:
+`CREATE DATABASE "seedlings_campaigns";`
 
-3) To connect to the development database:
-- `\c seedlings_campaigns`
+3) To create the 'testing' database:
+`CREATE DATABASE "seedlings_campaigns_test";`
 
-4) To create the campaigns table:
-- `CREATE TABLE campaigns(
-  	id SERIAL,
-  	name VARCHAR(50) PRIMARY KEY,
-  	image VARCHAR(50),
-  	country VARCHAR(30),
-  	sector VARCHAR(30),
-  	target_amount NUMERIC);`
+4) To quit the PostgreSQL interface:
+`\q`
 
-5) To create the investments table:
-- `CREATE TABLE investments(
-  	campaign_name VARCHAR(50) REFERENCES campaigns(name),
-  	investor_name VARCHAR(50) REFERENCES investor(name),
-  	amount NUMERIC,
-  	date TIMESTAMP default CURRENT_TIMESTAMP);`
+5) Navigate to the db/migrate directory:
+`cd db/migrate/`
 
-6) To create the investor table:
-- `CREATE TABLE investor(
-	 name VARCHAR(50) PRIMARY KEY);`
+6) To setup the development database:
+`ruby ./setup_dev_db.rb`
 
-7) To populate the development database, enter the sql contained in the following files:
-03_insert_into_campaigns_table.sql
-04_insert_into_investments_table.sql
-05_insert_into_investor_table.sql
-
-# TEST DATABASE AND TABLES
-
-To create the test database and tables, via the terminal, enter the following commands:
-
-1) To access PostgreSQL via the terminal:
-- `psql`
-
-2) For the 'testing' database:
-- `CREATE DATABASE "seedlings_campaigns_test";`
-
-3) To connect to the test database:
-- `\c seedlings_campaigns_test`
-
-4) To create the campaigns table:
-- `CREATE TABLE campaigns(
-  	id SERIAL,
-  	name VARCHAR(50) PRIMARY KEY,
-  	image VARCHAR(50),
-  	country VARCHAR(30),
-  	sector VARCHAR(30),
-  	target_amount NUMERIC);`
-
-5) To create the investments table:
-- `CREATE TABLE investments(
-  	campaign_name VARCHAR(50) REFERENCES campaigns(name),
-  	investor_name VARCHAR(50) REFERENCES investor(name),
-  	amount NUMERIC,
-  	date TIMESTAMP default CURRENT_TIMESTAMP);`
-
-6) To create the investor table:
-- `CREATE TABLE investor(
-	name VARCHAR(50) PRIMARY KEY);`
-
-***There is no need to populate the test database, this is done automatically by scripts when you run rspec from the command line during testing.***
+7) To setup the test database:
+`ruby ./setup_test_db.rb`

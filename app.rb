@@ -17,18 +17,10 @@ class Seedlings < Sinatra::Base
 
   post '/invest' do
     @investment = Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
-    p "##############   #{@investment}"
-    p "##############   #{@investment[0]}"
-    erb :confirmation
-    # redirect '/confirmation'
-  end
-
-  get '/confirmation' do
     erb :confirmation
   end
 
   configure do
     set :views, (proc { File.join(root, 'app/views') })
-    enable :sessions
   end
 end

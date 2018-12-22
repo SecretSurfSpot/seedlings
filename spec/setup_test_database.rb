@@ -3,7 +3,7 @@ require 'pg'
 def setup_test_database
   p 'setting up test database tables.....'
 
-  # Connect to the seedlings_campaigns_test database 
+  # Connect to the seedlings_campaigns_test database
   connection = PG.connect(dbname: 'seedlings_campaigns_test')
 
   # Clear the investments table
