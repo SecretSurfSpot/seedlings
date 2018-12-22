@@ -4,7 +4,9 @@ A mini Seedrs clone.
 
 ## Requirements
 
-Click here [Challenge Specification](./seedlings_challenge_specs.md) to see the full requirements/specification. From the given spec, a high level set of requirements, and 3 users stories, have been extrapolated below:
+Click the [Challenge Specification](./seedlings_challenge_specs.md) to see the full requirements/specification.
+
+From the given spec, a high level set of requirements, and 3 users stories, have been derived, as below:
 
 Implement a mini Seedrs website with 3 pages:
 1) List of Campaigns
@@ -47,7 +49,7 @@ The project can be found here: https://github.com/SecretSurfSpot/seedlings
 - Clone the repo to your local machine
 - Run `bundle install`
 
-### Database Setup Documentation
+### Database Setup
 
 - [Database Setup](./database_setup.md)
 
@@ -86,6 +88,9 @@ This will take you to the 'Confirmation' page, as shown in the screenshot below:
 
 ![Confirmation screenshot](https://github.com/SecretSurfSpot/seedlings/blob/master/images/confirmation_screenshot.png)
 
+
+Clicking on the 'Back to all campaigns' link, takes you back to the 'Campaign List' page.
+
 ## Appendix - Documentation
 
 - [CRC Cards](./crc_cards.md)
@@ -93,4 +98,3 @@ This will take you to the 'Confirmation' page, as shown in the screenshot below:
 
 
 ## Possible Improvements
-...........

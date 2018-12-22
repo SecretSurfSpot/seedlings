@@ -1,4 +1,4 @@
-# Setup the Development & Test Databases
+# Development & Test Database Setup
 
 To setup the development & test databases, via the terminal, enter the following commands:
 
@@ -18,7 +18,7 @@ To setup the development & test databases, via the terminal, enter the following
 `cd db/migrate/`
 
 6) To setup the development database:
-`ruby ./setup_dev_db.rb`
+`ruby ./01_setup_dev_db.rb`
 
 7) To setup the test database:
-`ruby ./setup_test_db.rb`
+`ruby ./02_setup_test_db.rb`

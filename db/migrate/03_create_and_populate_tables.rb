@@ -60,26 +60,26 @@ class DatabaseCreation
 
     # INSERT values into the investments table
     connection.exec("INSERT into investments(campaign_name, investor_name, amount)
-      VALUES('Campaign_1', 'guest', 100000),
-        ('Campaign_2', 'guest', 30000),
-        ('Campaign_3', 'guest', 25000),
-        ('Campaign_4', 'guest', 1000),
-        ('Campaign_5', 'guest', 100000),
-        ('Campaign_6', 'guest', 5000),
-        ('Campaign_7', 'guest', 15000),
-        ('Campaign_8', 'guest', 18000),
-        ('Campaign_9', 'guest', 19000),
-        ('Campaign_10', 'guest', 20000),
-        ('Campaign_1', 'guest', 100000),
-        ('Campaign_2', 'guest', 30000),
-        ('Campaign_3', 'guest', 40000),
-        ('Campaign_4', 'guest', 50000),
-        ('Campaign_5', 'guest', 10000),
-        ('Campaign_6', 'guest', 90000),
-        ('Campaign_7', 'guest', 30000),
-        ('Campaign_8', 'guest', 20000),
-        ('Campaign_9', 'guest', 70000),
-        ('Campaign_10', 'guest', 10000);
+      VALUES('Campaign_1', 'guest', 200000),
+        ('Campaign_2', 'guest', 60000),
+        ('Campaign_3', 'guest', 300000),
+        ('Campaign_4', 'guest', 240000),
+        ('Campaign_5', 'guest', 1100000),
+        ('Campaign_6', 'guest', 15000),
+        ('Campaign_7', 'guest', 120000),
+        ('Campaign_8', 'guest', 38000),
+        ('Campaign_9', 'guest', 350000),
+        ('Campaign_10', 'guest', 600000),
+        ('Campaign_11', 'guest', 8000000),
+        ('Campaign_12', 'guest', 30000),
+        ('Campaign_13', 'guest', 300000),
+        ('Campaign_14', 'guest', 500000),
+        ('Campaign_15', 'guest', 300000),
+        ('Campaign_16', 'guest', 90000),
+        ('Campaign_17', 'guest', 700000),
+        ('Campaign_18', 'guest', 2000000),
+        ('Campaign_19', 'guest', 70000),
+        ('Campaign_20', 'guest', 600000);
         ")
   end
 end
