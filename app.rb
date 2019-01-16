@@ -20,18 +20,14 @@ class Seedlings < Sinatra::Base
     Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
     session[:campaign_name] = params[:campaign_name]
     session[:amount] = params[:amount]
-    p "1 param campaign_name is #{params[:campaign_name]}"
-    p "2 session campaign_name is #{session[:campaign_name]}"
     redirect '/confirmation'
-    #erb :confirmation
   end
 
   get '/confirmation' do
-    p "3 session campaign_name is #{session[:campaign_name]}"
-    p "4 session amount is #{session[:amount]}"
     @campaign_name = session[:campaign_name]
     @amount = session[:amount]
-    p "5 campaign_name is: #{@campaign_name}"
+    session[:campaign_name] = nil
+    session[:amount] = nil
     erb :confirmation
   end
 
