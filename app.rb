@@ -9,7 +9,7 @@ class Seedlings < Sinatra::Base
     erb :campaign_list
   end
 
-  get '/:name' do
+  get '/campaign/:name' do
     @single_campaign = Campaign.select_campaign(name: params[:name])
     erb :campaign
   end
