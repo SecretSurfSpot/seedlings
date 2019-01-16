@@ -22,6 +22,16 @@ class Seedlings < Sinatra::Base
     session[:amount] = params[:amount]
     p "1 param campaign_name is #{params[:campaign_name]}"
     p "2 session campaign_name is #{session[:campaign_name]}"
+    redirect '/confirmation'
+    #erb :confirmation
+  end
+
+  get '/confirmation' do
+    p "3 session campaign_name is #{session[:campaign_name]}"
+    p "4 session amount is #{session[:amount]}"
+    @campaign_name = session[:campaign_name]
+    @amount = session[:amount]
+    p "5 campaign_name is: #{@campaign_name}"
     erb :confirmation
   end
 
