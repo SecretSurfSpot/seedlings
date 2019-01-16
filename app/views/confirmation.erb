@@ -1,14 +1,12 @@
 <title>Confirmation</title>
 
   <ul class="list-group" >
-    <% @investment.each do |element| %>
         <div class="media-body">
           <h6 class="media-heading"></h6>
-          <h6 class="media-heading"><%= "Congratulations! you have successfully invested £#{element['amount']} in #{element['campaign_name']}" %></h6>
+          <h6 class="media-heading"><%= "Congratulations! you have successfully invested £#{session[:amount]} in #{session[:campaign_name]}" %></h6>
           <br>
           <a href="/" style="text-decoration: none">
             <h6 class="media-heading">Back to all campaigns</h6>
           </a>
         </div>
-    <% end %>
   </ul>
