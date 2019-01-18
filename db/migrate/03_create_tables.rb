@@ -3,7 +3,7 @@ require_relative 'campaign_array'
 require_relative 'investment_array'
 
 class DatabaseCreation
-  def self.create_and_populate_tables(database_name)
+  def self.create_tables(database_name)
     # Connect to the seedlings_campaigns_test database
     connection = PG.connect(dbname: database_name)
 
@@ -29,6 +29,6 @@ class DatabaseCreation
       amount NUMERIC,
       date TIMESTAMP default CURRENT_TIMESTAMP);
       ")
-      
+
   end
 end
