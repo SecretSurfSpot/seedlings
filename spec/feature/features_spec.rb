@@ -23,25 +23,27 @@ feature 'Feature Tests' do
   scenario 'User selects Campaign_2 from Campaign List page' do
     visit '/'
     campaign = CampaignDetails::CAMPAIGN_ARRAY[1]
-      find(:xpath, "//a[@href='/campaign/#{campaign[:name]}']").click
-      expect(page).to have_title('Investment')
-      expect(page).to have_css("img[src*='images/#{campaign[:image]}.jpeg']")
-      expect(page).to have_css('.media-heading.name', text: "#{campaign[:name]}")
-      expect(page).to have_css('.media-heading.country', text: "#{campaign[:country]}")
-      expect(page).to have_css('.media-heading.sector', text: "#{campaign[:sector]}")
-      expect(page).to have_css('.media-heading.target_amount', text: "#{campaign[:target_amount]}")
-      expect(page).to have_css('.progress-bar-percentage', text: '% Funded')
-      expect(page).to have_css('.invest', text: 'How much do you want to invest?')
-      expect(page).to have_selector(:link_or_button, 'Invest')
+    find(:xpath, "//a[@href='/campaign/#{campaign[:name]}']").click
+    expect(page).to have_title('Investment')
+    expect(page).to have_css("img[src*='images/#{campaign[:image]}.jpeg']")
+    expect(page).to have_css('.media-heading.name', text: "#{campaign[:name]}")
+    expect(page).to have_css('.media-heading.country', text: "#{campaign[:country]}")
+    expect(page).to have_css('.media-heading.sector', text: "#{campaign[:sector]}")
+    expect(page).to have_css('.media-heading.target_amount', text: "#{campaign[:target_amount]}")
+    expect(page).to have_css('.progress-bar-percentage', text: '% Funded')
+    expect(page).to have_css('.invest', text: 'How much do you want to invest?')
+    expect(page).to have_selector(:link_or_button, 'Invest')
   end
 
   scenario 'User invests £65000 into Campaign_3' do
     visit '/'
-    find(:xpath, "//a[@href='/campaign/Campaign_3']").click
+    campaign = CampaignDetails::CAMPAIGN_ARRAY[2]
+    find(:xpath, "//a[@href='/campaign/#{campaign[:name]}']").click
+    expect(page).to have_title('Investment')
     fill_in 'amount', with: 65_000
     find_button('Invest').click
     expect(page).to have_title('Confirmation')
-    expect(page).to have_content('Congratulations! you have successfully invested £65000 in Campaign_3')
+    expect(page).to have_css('.media-heading.congratulations', text: "Congratulations! you have successfully invested £65000 in #{campaign[:name]}")
     expect(page).to have_selector(:css, 'a[href="/"]')
   end
 end
