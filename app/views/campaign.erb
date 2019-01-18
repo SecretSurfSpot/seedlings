@@ -2,7 +2,7 @@
 
   <ul class="list-group" >
     <% @single_campaign.each do |campaign| %>
-      <li style="margin-bottom:25px">
+      <li id="<%= campaign.name.downcase %>" style="margin-bottom:25px">
         <div class="media">
           <div class="media-left">
             <img src="/images/<%= campaign.image %>.jpeg" class="media-object">
@@ -10,25 +10,25 @@
         </div>
         <br>
         <div class="media-body">
-          <h6 class="media-heading"><%= campaign.name %></h6>
+          <h6 class="media-heading name"><%= campaign.name %></h6>
           <br>
           <div class="left_right_Container">
-            <h6 class="media-heading"><%= campaign.country %></h6>
-            <h6 class="media-heading"><%= campaign.sector %></h6>
+            <h6 class="media-heading country"><%= campaign.country %></h6>
+            <h6 class="media-heading sector"><%= campaign.sector %></h6>
           </div>
           <br>
           <br>
-          <h5 class="media-heading">Target Amount: £<%= campaign.target_amount %></h5>
+          <h5 class="media-heading target_amount">Target Amount: £<%= campaign.target_amount %></h5>
         </div>
         <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
           aria-valuemin="0" aria-valuemax="100" style="width:<%= campaign.percentage %>%">
-            <span class=""><%= campaign.percentage %>% Funded</span>
+            <span class="progress-bar-percentage"><%= campaign.percentage %>% Funded</span>
           </div>
         </div>
       </li>
     </ul>
-    <form class="" form action="/invest" method="post">
+    <form class="invest" form action="/invest" method="post">
       <h6>How much do you want to invest?<br><br>
       <input type="hidden" id="campaign_name" name="campaign_name" value="<%= campaign.name %>">
       <input type="text" name="amount" value="">
