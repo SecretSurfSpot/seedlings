@@ -1,13 +1,23 @@
+require 'pg'
+require_relative '../../db/migrate/campaign_array'
+
 feature 'Feature Tests' do
   scenario 'User navigates to the Campaign List page' do
     visit '/'
     expect(page).to have_title('Campaign List')
-    expect(page).to have_content('Campaign_1')
-    expect(page).to have_content('United Kingdom')
-    expect(page).to have_content('Automotive')
-    expect(page).to have_content('£1000000')
-    expect(page).to have_content('Campaign_5')
-    expect(page).to have_content('Campaign_20')
+    number = 1
+    include CampaignDetails
+      CampaignDetails::CAMPAIGN_ARRAY.each do |campaign|
+        within "li#campaign_#{number}" do
+          expect(page).to have_css("img[src*='images/#{campaign[:image]}.jpeg']")
+          expect(page).to have_css('.media-heading.name', text: "#{campaign[:name]}")
+          expect(page).to have_css('.media-heading.country', text: "#{campaign[:country]}")
+          expect(page).to have_css('.media-heading.sector', text: "#{campaign[:sector]}")
+          expect(page).to have_css('.media-heading.target_amount', text: "#{campaign[:target_amount]}")
+          expect(page).to have_css('.progress-bar-percentage', text: '% Funded')
+        end
+        number +=1
+      end
   end
 
   scenario 'User selects Campaign_2 from Campaign List page' do
