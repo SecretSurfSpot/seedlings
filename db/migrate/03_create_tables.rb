@@ -29,6 +29,5 @@ class DatabaseCreation
       amount NUMERIC,
       date TIMESTAMP default CURRENT_TIMESTAMP);
       ")
-
   end
 end

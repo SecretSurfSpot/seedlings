@@ -25,6 +25,5 @@ class DatabasePopulation
       connection.exec("INSERT into investments(campaign_name, investor_name, amount)
       VALUES('#{investment[:campaign_name]}','#{investment[:investor_name]}','#{investment[:amount]}')")
     end
-
   end
 end
