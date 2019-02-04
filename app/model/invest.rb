@@ -17,11 +17,11 @@ class Invest
   end
 
   def self.verify_numeric(amount)
-    raise ArgumentError, 'Error: investment amount must be a number' unless amount.to_i.is_a? Integer
+    raise ArgumentError, 'Error: investment amount must be a number' unless amount.is_a? Integer
   end
 
   def self.verify_positive(amount)
-    raise ArgumentError, 'Error: investment amount must be positive' unless amount.to_i.positive?
+    raise ArgumentError, 'Error: investment amount must be positive' unless amount.positive?
   end
 
   private_class_method :verify_numeric

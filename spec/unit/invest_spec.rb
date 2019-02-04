@@ -8,11 +8,11 @@ describe Invest do
     end
 
     it 'should raise an error if the given amount is a special character' do
-      expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: '!@£$%^&*()_=+') }.to raise_error 'Error: investment amount must be positive'
+      expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: '!@£$%^&*()_=+') }.to raise_error 'Error: investment amount must be a number'
     end
 
     it 'should raise an error if the given amount isn\'t a number' do
-      expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: 'string') }.to raise_error 'Error: investment amount must be positive'
+      expect { Invest.invest_in_campaign(name: 'Campaign_3', amount: 'string') }.to raise_error 'Error: investment amount must be a number'
     end
 
     it 'should raise an error if the given amount isn\'t a positive number' do

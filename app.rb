@@ -17,7 +17,7 @@ class Seedlings < Sinatra::Base
   end
 
   post '/invest' do
-    Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount])
+    Invest.invest_in_campaign(name: params[:campaign_name], amount: params[:amount].to_i)
     session[:campaign_name] = params[:campaign_name]
     session[:amount] = params[:amount]
     redirect '/confirmation'
